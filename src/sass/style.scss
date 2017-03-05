@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+@import "./bower_components/normalize-css/normalize";
+
+@import "variables";
+
+@import "./bower_components/basscss-sass/scss/basscss";
+@import "./bower_components/basscss-sass/scss/_btn.scss";
+@import "./bower_components/basscss-sass/scss/_btn-primary.scss";
+@import "./bower_components/basscss-sass/scss/_btn-outline.scss";
+
+@import "base/**/*.scss";
+@import "components/**/*.scss";
+
+body, html {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
+}
+
+// img {
+//   max-width: 100%;
+//   width: auto;
+// }
+
+h1, h2, h3, h4 {
+  font-family: enzo, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.intro {
+  padding: 100px 50px 50px 50px;
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    color: $dark;
+  }
+  h2 {
+    color: #686d71;
+  }
+}
+
+.hero-bg {
+  background-image: url(../images/woman-at-computer.jpg);
+  background-size: cover;
+}
