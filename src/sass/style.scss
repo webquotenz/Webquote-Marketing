@@ -2,6 +2,7 @@
 
 @import "./bower_components/normalize-css/normalize";
 
+@import "mixins";
 @import "variables";
 
 @import "./bower_components/basscss-sass/scss/basscss";
@@ -33,19 +34,44 @@ h1, h2, h3, h4 {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  @include MQ(S) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  @include MQ(Sneg) {
+    height: 400px;
+    background-image: url(../images/woman-at-computer.jpg);
+  }
+}
+
+.logo {
+  @include MQ(Sneg) {
+    text-align: center;
+    width: 100%;
+    img {
+      width: 240px;
+    }
+  }
 }
 
 .intro {
-  padding: 100px 50px 50px 50px;
+  padding: 30px 50px 50px 50px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  @include MQ(S) {
+    padding: 100px 50px 50px 50px;
+  }
   h1 {
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 20px;
     color: $dark;
+    @include MQ(Sneg) {
+      margin-top: 0;
+    }
   }
   h2 {
     color: #686d71;
@@ -55,4 +81,7 @@ header {
 .hero-bg {
   background-image: url(../images/woman-at-computer.jpg);
   background-size: cover;
+  @include MQ(Sneg) {
+    display: none;
+  }
 }
